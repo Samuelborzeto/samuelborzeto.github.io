@@ -1,5 +1,5 @@
 /* guarda o jogo no celular para abrir sem internet; atualiza em segundo plano quando houver rede */
-const CACHE = 'esteira-v9';
+const CACHE = 'esteira-v10';
 const CORE = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
